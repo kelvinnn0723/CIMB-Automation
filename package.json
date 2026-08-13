@@ -1,0 +1,29 @@
+{
+  "name": "cimb-loan-calculator-automation",
+  "version": "1.0.0",
+  "description": "Playwright automation for CIMB Loan Calculator form testing with Allure reporting",
+  "author": "QA Team",
+  "license": "MIT",
+  "scripts": {
+    "test:gherkin": "npx @cucumber/cucumber",
+    "test:gherkin:loan-calculator": "npx @cucumber/cucumber --tags @loan-calculator",
+    "loan-calculator": "npm run test:gherkin:loan-calculator",
+    "loan-calculator:allure": "rimraf allure-results && npx @cucumber/cucumber --tags @loan-calculator --format allure-cucumberjs/reporter",
+    "allure:generate": "rimraf allure-report && npx allure generate allure-results --output allure-report",
+    "allure:open": "npx allure open allure-report",
+    "report:clean": "rimraf allure-results allure-report cucumber-report.html"
+  },
+  "devDependencies": {
+    "@cucumber/cucumber": "^13.2.1",
+    "@playwright/test": "^1.44.1",
+    "allure": "^0.0.0",
+    "allure-cucumberjs": "^3.10.2",
+    "allure-js-commons": "^3.10.2",
+    "rimraf": "^5.0.5",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.1.6"
+  },
+  "dependencies": {
+    "dotenv": "^17.4.2"
+  }
+}
