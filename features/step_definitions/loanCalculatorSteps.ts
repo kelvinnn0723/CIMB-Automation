@@ -14,7 +14,10 @@ let calculatorPage: LoanCalculatorPage;
  * Hooks for test setup and teardown
  */
 Before({ name: "Launch browser" }, async function() {
-  browser = await chromium.launch({ headless: environment.headless });
+  browser = await chromium.launch({
+    headless: environment.headless,
+    slowMo: environment.slowMo
+  });
   page = await browser.newPage();
   calculatorPage = new LoanCalculatorPage(page);
 });

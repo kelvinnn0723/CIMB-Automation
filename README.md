@@ -17,6 +17,16 @@ Run the tagged Loan Calculator scenario:
 npm run loan-calculator
 ```
 
+Run the same scenario in headed mode, and optionally slow down browser actions to make the flow visible:
+
+```powershell
+npm run loan-calculator:headed
+npm run loan-calculator:speed
+npm run test:gherkin:headed -- --tags @loan-calculator --speed=500
+```
+
+The `--speed` value is in milliseconds and works with the browser launch config. `--headed` forces a visible browser window.
+
 Generate and open an Allure report:
 
 ```powershell
