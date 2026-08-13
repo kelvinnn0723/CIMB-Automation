@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
     "target": "ESNext",
-    "module": "commonjs",
+    "module": "Node16",
     "lib": ["ESNext"],
     "outDir": "./dist",
     "rootDir": "./",
@@ -24,7 +24,7 @@
     "noUnusedParameters": true,
     "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": true,
-    "moduleResolution": "node",
+    "moduleResolution": "Node16",
     "types": ["@playwright/test", "node"]
   },
   "include": ["tests/**/*.ts"],
